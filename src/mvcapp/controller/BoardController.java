@@ -20,13 +20,13 @@ public class BoardController {
     } // 근데 이 코드는 매번 new하게 만들어서 별로임. -> 주입받을 거임
 
 
-    private BoardController boardRepository;
+    private BoardRepository boardRepository;
 
     //  결국 controller가 repository를 필요로 함. = controller는 repository에 의존적이다.
     // 의존적인 객체를 dispathcerServlet로부터 주입받을 것(생성자로 주입받음)
 
     // 주입받는 코드임. 초기화. 생성자 코드
-    public BoardController(BoardController boardRepository) {
+    public BoardController(BoardRepository boardRepository) {
         this.boardRepository = boardRepository;
     }
 

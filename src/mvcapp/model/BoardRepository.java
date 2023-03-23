@@ -16,7 +16,7 @@ public class BoardRepository {
     // 클라이언트가 title,content를 잘 보냈는지 체크하는 역할은 controller or DS가 함. 체크는 필수! controller에서 유효성 검사 필수!
     public void save(String title, String content){
         DB.insert(title, content);
-// INSERT INTO board(title, content) VALUES('제목1', '내용')
+        // INSERT INTO board(title, content) VALUES('제목1', '내용')
     }
 
 }

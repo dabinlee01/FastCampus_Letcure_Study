@@ -30,12 +30,14 @@ public class DispatcherServlet extends HttpServlet {
 
 
         // 4. 컨트롤러 객체 생성, DI 의존성 주입.
-        BoardController boardCon = new BoardController(new BoardRepository());
+        BoardRepository boardRepository = new BoardRepository();
+        BoardController boardCon = new BoardController(boardRepository);
+        //BoardController boardCon = new BoardController(new BoardRepository());
 
 
 
         // 5. 라우팅하기
-        if(path.equals("baord")) {
+        if(path.equals("board")) {
             switch (action) {
 
                 case "saveForm" :  // saveform 페이지 줘
